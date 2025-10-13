@@ -127,7 +127,10 @@ const PRODUCTS = [
 ];
 
 function usd(n) {
-  return `$${n.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
+  // שימוש בבנאי מחרוזת פשוט כדי להימנע משגיאות תבנית
+  const val = Number(n);
+  return '$' + val.toLocaleString('en-US', { maximumFractionDigits: 0 });
+})}`;
 })}`;
 }
 
